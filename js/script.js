@@ -66,6 +66,31 @@ function createTable(data){
         imctable.appendChild(div);
     });
 }
+
+function cleanInputs(){
+    heightInput.value = "";
+    weightInput.value = "";
+}
+
+// Função de validação de Numeros e virgula
+function validDigits(text){
+    return text.replace(/[^0-9,]/g, "");
+}
+
 // Inicialização
 createTable(data);
 // Eventos
+
+// Validação de numeros
+[heightInput, weightInput].forEach((el)=>{
+    el.addEventListener("input", (e)=> {
+        const updateValue = validDigits(e.target.value);
+
+        e.target.value = updateValue;
+    });
+});
+
+clearBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    cleanInputs();
+})
