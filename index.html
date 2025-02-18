@@ -12,13 +12,13 @@
 
 
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
     <title>Calculadora de IMC</title>
 </head>
 <body>
     <main>
         <div class="container">
-            <div id="calc-container" class="hide">
+            <div id="calc-container" >
                 <h2>Calculadora de IMC</h2>
                 <form id="imc-form">
                     <div id="form-input">
@@ -41,9 +41,9 @@
                     </div>
                 </form>
             </div>
-            <div id="result-container" >
-                <p id="imc-number">Seu IMC: <span class="good"> 25 </span></p>
-                <p id="imc-info">Situação Atual: <span class="good"> Magro </span></p>
+            <div id="result-container" class="hide">
+                <p id="imc-number">Seu IMC: <span></span></p>
+                <p id="imc-info">Situação Atual: <span></span></p>
                 <h3>Confira as Classificações: </h3>
                 <div id="imc-table">
                     <div class="table-header">
